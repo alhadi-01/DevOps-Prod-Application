@@ -1,0 +1,14 @@
+Monitoring and observability using AWS Prometheus and Grafana.
+
+AWS Prometheus and Grafana for setting up monitoring and observability on AWS EKS cluster level.
+
+-	For AWS Prometheus Amp workspace creation for data managed by aws with respective workspace id and workspace remote write URL for access.
+-	Enable aws managed scrapper for collecting metrics and configure it for eks cluster.
+-	Grained access using Iam for user and service access in aws.
+And.
+-	Data ingested to amp workspace through scrappers.
+-	Create Grafana a workspace for observability dashboard
+-	Integrating Grafana workspace to aws Prometheus workspace by adding data source using AMP endpoint/access point. 
+-	Import dashboard for Kubernetes pod node service metrics.
+
+CloudWatch and can be implemented to monitor over cluster behaviour and metrics and integrated service for monitoring auditing can be done using CloudTrail AWS Config is a better option to go with precise fine grained implementation for project compliance.
