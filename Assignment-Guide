@@ -1,0 +1,52 @@
+https://github.com/alhadi-01/DevOps-Prod-Application
+
+Application Deploymet with CI/CD Jenkins on Kubernetes AWS EKS using  ArgoCd.
+
+-	Source code and configuration is managed at GitHub for code, dependencies, application manifests and respective Jenkins file with stages and Docker file.
+-	Using GitHub for source code  CI/CD pipeline implemented in two stages Continuous Integration with Jenkins and Continuous Deployment using Argocd on Kubernetes or AWS EKS.
+
+-	Continuous integration involves :
+-	Source code checkout at GitHub repository 
+-	Application Build using Maven 
+-	Static Code analysis using SonarQube for code scanning
+(Note: SonarQube Server to be configured and credentials and need to be added in Jenkins)
+-	Using Docker for image build for application and pushing it to Docker-hub maintained repository.
+(Docker credentials need to be configured with Jenkins including GitHub credentials)
+
+-	 Continuous Deployment using ArgoCD:
+-	ArgoCd operator Installed at AWS EKS
+-	Tracks the application manifest at GitHub
+-	Any commit happens at repository ArgoCd track the changes
+-	Updated application manifest deployed on AWS EKS using ArgoCd.
+
+
+ AWS Infrastructure as a code setup with terraform 
+
+-	Refer GitHub repository for EC2, VPC, EBS, S3 configuration for infra provisioning using Terraform.
+-	Configuration can be implemented using modules or variables and values    depends on the requirement).
+
+                  Basic Commands to provision infra with respective configurations:
+                    terraform init
+                    terraform validate
+                    terraform plan
+                    terraform apply
+
+
+
+Monitoring and observability using AWS Prometheus and Grafana.
+
+AWS Prometheus and Grafana for setting up monitoring and observability on AWS EKS cluster level.
+
+-	For AWS Prometheus Amp workspace creation for data managed by aws with respective workspace id and workspace remote write URL for access.
+-	Enable aws managed scrapper for collecting metrics and configure it for eks cluster.
+-	Grained access using Iam for user and service access in aws.
+And.
+-	Data ingested to amp workspace through scrappers.
+-	Create Grafana a workspace for observability dashboard
+-	Integrating Grafana workspace to aws Prometheus workspace by adding data source using AMP endpoint/access point. 
+-	Import dashboard for Kubernetes pod node service metrics.
+
+CloudWatch and can be implemented to monitor over cluster behaviour and metrics and integrated service for monitoring auditing can be done using CloudTrail AWS Config is a better option to go with precise fine grained implementation for project compliance.
+ 
+
+
